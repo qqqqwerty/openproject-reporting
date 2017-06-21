@@ -17,7 +17,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 #++
 
-class Widget::Table::EntryTable < Widget::Table
+class ::Widget::Table::EntryTable < ::Widget::Table
   FIELDS = [:spent_on, :user_id, :activity_id, :work_package_id, :comments, :project_id]
 
   detailed_table self
@@ -33,9 +33,7 @@ class Widget::Table::EntryTable < Widget::Table
           concat foot
           concat body
         end
-        table +
-        content_tag(:div, class: 'generic-table--header-background') {} +
-        content_tag(:div, class: 'generic-table--footer-background') {}
+        table
       end
     end
     write content
